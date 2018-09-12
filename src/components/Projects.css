@@ -1,0 +1,15 @@
+.bg {
+  background: linear-gradient(to bottom, white, #f0f0f0);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.projects {
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, 22rem);
+}

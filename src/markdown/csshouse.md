@@ -1,0 +1,1 @@
+The third train CSS challenge ended up in an animated house emoji!

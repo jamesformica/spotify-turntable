@@ -1,0 +1,362 @@
+[
+  {
+    "name": [
+      "CSS",
+      "Monster 👹"
+    ],
+    "tags": [
+      "CSS",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/css-monster/",
+    "github": "https://github.com/jamesformica/css-monster",
+    "action": "check it!",
+    "image": "monster",
+    "markdown": "monster"
+  },
+  {
+    "name": [
+      "Dear",
+      "Rent",
+      "Diary 📔"
+    ],
+    "tags": [
+      "React",
+      "Canvas",
+      "Game",
+      "Crazy"
+    ],
+    "url": "https://jamesformica.github.io/dear-rent-diary/",
+    "github": "https://github.com/jamesformica/dear-rent-diary",
+    "action": "try it!",
+    "image": "rent",
+    "markdown": "rent"
+  },
+  {
+    "name": [
+      "Lindenmayer",
+      "Aquarium"
+    ],
+    "tags": [
+      "Canvas",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/Lindenmayer-Aquarium/",
+    "github": "https://github.com/jamesformica/Lindenmayer-Aquarium",
+    "action": "watch it!",
+    "image": "aquarium",
+    "markdown": "aquarium"
+  },
+  {
+    "name": [
+      "L-System",
+      "Art"
+    ],
+    "tags": [
+      "Canvas",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/L-System-Fun/",
+    "github": "https://github.com/jamesformica/L-System-Fun",
+    "action": "see it!",
+    "image": "lsystem",
+    "markdown": "lsystem"
+  },
+  {
+    "name": [
+      "CSS",
+      "Car 🚗"
+    ],
+    "tags": [
+      "CSS",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/css-car/",
+    "github": "https://github.com/jamesformica/css-car",
+    "action": "see it!",
+    "image": "csscar",
+    "markdown": "csscar"
+  },
+  {
+    "name": [
+      "CSS",
+      "House 🏠"
+    ],
+    "tags": [
+      "CSS",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/css-house/",
+    "github": "https://github.com/jamesformica/css-house",
+    "action": "see it!",
+    "image": "csshouse",
+    "markdown": "csshouse"
+  },
+  {
+    "name": [
+      "CSS",
+      "Traffic",
+      "Light 🚦"
+    ],
+    "tags": [
+      "CSS",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/css-trafficlight/",
+    "github": "https://github.com/jamesformica/css-trafficlight",
+    "action": "see it!",
+    "image": "csstrafficlight",
+    "markdown": "csstrafficlight"
+  },
+  {
+    "name": [
+      "CSS",
+      "Goldfish 🐠"
+    ],
+    "tags": [
+      "CSS",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/css-goldfish/",
+    "github": "https://github.com/jamesformica/css-goldfish",
+    "action": "see it!",
+    "image": "cssgoldfish",
+    "markdown": "cssgoldfish"
+  },
+  {
+    "name": [
+      "Canvas",
+      "Madness"
+    ],
+    "tags": [
+      "Presentation"
+    ],
+    "url": "https://jamesformica.github.io/canvas-madness/",
+    "github": "https://github.com/jamesformica/canvas-madness",
+    "action": "see it!",
+    "image": "canvasmadness",
+    "markdown": "canvasmadness"
+  },
+  {
+    "name": [
+      "Llama",
+      "rama"
+    ],
+    "tags": [
+      "React",
+      "Canvas",
+      "Game"
+    ],
+    "url": "https://jamesformica.github.io/llamarama/",
+    "github": "https://github.com/jamesformica/llamarama",
+    "action": "play it!",
+    "image": "llamarama",
+    "markdown": "llamarama"
+  },
+  {
+    "name": [
+      "Line",
+      "Art"
+    ],
+    "tags": [
+      "Canvas",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/lineart/",
+    "github": "https://github.com/jamesformica/lineart",
+    "action": "try it!",
+    "image": "lineart",
+    "markdown": "lineart"
+  },
+  {
+    "name": [
+      "Sketch",
+      "ly"
+    ],
+    "tags": [
+      "React",
+      "Canvas",
+      "Game"
+    ],
+    "url": "https://sketchly.netlify.com/",
+    "github": null,
+    "action": "play it!",
+    "image": "sketchly",
+    "markdown": "sketchly"
+  },
+  {
+    "name": [
+      "Mood",
+      "ly"
+    ],
+    "tags": [
+      "Canvas",
+      "Art",
+      "Crazy"
+    ],
+    "url": "https://jamesformica.github.io/moodly/",
+    "github": "https://github.com/jamesformica/moodly",
+    "action": "try it!",
+    "image": "moodly",
+    "markdown": "moodly"
+  },
+  {
+    "name": [
+      "CSS",
+      "Grid"
+    ],
+    "tags": [
+      "Presentation"
+    ],
+    "url": "https://jamesformica.github.io/css-grids/",
+    "github": "https://github.com/jamesformica/css-grids",
+    "action": "see it!",
+    "image": "cssgrid",
+    "markdown": "cssgrid"
+  },
+  {
+    "name": [
+      "A",
+      "C",
+      "E"
+    ],
+    "tags": [
+      "Crazy"
+    ],
+    "url": "https://jamesformica.github.io/ace/",
+    "github": "https://github.com/jamesformica/ace",
+    "action": "try it!",
+    "image": "ace",
+    "markdown": "ace"
+  },
+  {
+    "name": [
+      "My",
+      "Blog",
+      " (inactive)"
+    ],
+    "tags": [
+      "Blog"
+    ],
+    "url": "https://jamesformica.github.io/blog/",
+    "github": "https://github.com/jamesformica/blog",
+    "action": "read it!",
+    "image": "blog",
+    "markdown": "blog"
+  },
+  {
+    "name": [
+      "Split",
+      "tr"
+    ],
+    "tags": [
+      "Canvas",
+      "Game",
+      "SASS"
+    ],
+    "url": "https://jamesformica.github.io/splittr",
+    "github": "https://github.com/jamesformica/splittr",
+    "action": "play it!",
+    "image": "splittr",
+    "markdown": "splittr"
+  },
+  {
+    "name": [
+      "Simple",
+      "Paint"
+    ],
+    "tags": [
+      "Canvas"
+    ],
+    "url": "https://jamesformica.github.io/simplepaint",
+    "github": "https://github.com/jamesformica/simplepaint",
+    "action": "try it!",
+    "image": "simplepaint",
+    "markdown": "simplepaint"
+  },
+  {
+    "name": [
+      "Last",
+      "Hand",
+      "Standing"
+    ],
+    "tags": [
+      "Game",
+      "Ruby"
+    ],
+    "url": "https://lasthandstanding.herokuapp.com",
+    "github": "https://github.com/julianrizzo/last-hand-standing-app",
+    "action": "play it!",
+    "image": "lasthandstanding",
+    "markdown": "lasthandstanding"
+  },
+  {
+    "name": [
+      "CSS",
+      "Playground"
+    ],
+    "tags": [
+      "Presentation"
+    ],
+    "url": "https://cssplayground.herokuapp.com",
+    "github": "https://github.com/jamesformica/fun-with-css",
+    "action": "try it!",
+    "image": "cssplayground",
+    "markdown": "cssplayground"
+  },
+  {
+    "name": [
+      "Event",
+      "Timeline"
+    ],
+    "tags": [],
+    "url": "",
+    "github": "https://github.com/jamesformica/lot-2318-timeline",
+    "action": "",
+    "image": "eventtimeline",
+    "markdown": "eventtimeline"
+  },
+  {
+    "name": [
+      "Eat",
+      "Week 🥘"
+    ],
+    "tags": [],
+    "url": "",
+    "github": "https://github.com/jamesformica/EatWeek",
+    "action": "",
+    "image": "eatweek",
+    "markdown": "eatweek"
+  },
+  {
+    "name": [
+      "T",
+      "rains 🚂"
+    ],
+    "tags": [
+      "Canvas",
+      "Game"
+    ],
+    "url": "https://jamesformica.github.io/trains",
+    "github": "https://github.com/jamesformica/Trains",
+    "action": "play it!",
+    "image": "trains",
+    "markdown": "trains"
+  },
+  {
+    "name": [
+      "Off",
+      "The",
+      "Record"
+    ],
+    "tags": [
+      "Crazy",
+      "Ruby"
+    ],
+    "url": "https://offtherecord2.herokuapp.com",
+    "github": "https://github.com/jamesformica/off-the-record",
+    "action": "see it!",
+    "image": "offtherecord",
+    "markdown": "offtherecord"
+  },
+]

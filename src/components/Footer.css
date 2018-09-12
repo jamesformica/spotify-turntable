@@ -1,0 +1,17 @@
+.footer {
+  border-top: 3px dashed #f0f0f0;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: hue-rotate(120deg);
+}
+
+.text {
+  background: black;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}

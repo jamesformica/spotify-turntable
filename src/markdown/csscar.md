@@ -1,0 +1,3 @@
+This was a creation as a fun initiative at work to get those creative juices flowing. The brief was to create a CSS Car. I decided than an old style car was going to be my choice from a front-on perspective.
+
+I wanted a day/night cycle and to even be able to control the car's steering purely in CSS. I'm really proud of how this one turned out. And also of all the other submissions from my colleagues.

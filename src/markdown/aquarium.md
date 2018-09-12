@@ -1,0 +1,3 @@
+Following the trend with L-Systems, the visual representation of biological plants really caught my intention. I wanted to build my own Lindenmayer system that could generate plants in an aquarium environment. Spoiler alert: It was super fun to build and the result is quite therapeutic to watch.
+
+The basic premise to any L-System is to have the following: an alphabet, an axiom, and some rules. The alphabet consisted of: **F + - [ ]**. The axiom was the starting character and the rules dictated string replacement operations. In the end you end up with a massive sentence of characters which when rendered produces beautiful art. There's a 'how it works' modal in the app that goes into specifics with examples.

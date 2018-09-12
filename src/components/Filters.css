@@ -1,0 +1,13 @@
+.filters {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin-left: -0.25rem;
+}
+
+@media (min-width: 40rem) {
+  .filters {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,9 @@
+.button {
+  font-weight: bold;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  border-width: 0.25rem;
+  border-style: solid;
+  margin: 0.25rem;
+  outline: none;
+}

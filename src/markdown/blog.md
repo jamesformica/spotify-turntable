@@ -1,0 +1,3 @@
+I've wanted to start a blog for a while now to talk about things that are on my mind and happening in my life. The posts are written in a markdown file then converted clientside before rendering. I've added support for Google Charts integration and support for tables was already available.
+
+Come have a read if you want to learn about why the blog is called Odd Socks, or how my addiction to Rocket League got out of hand, or my general thoughts on getting married. It's definitely not a serious blog and has been known to contain Emoji, memes and sarcasm.
