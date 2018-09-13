@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import Markdown from 'react-markdown'
 
-import FilterButton from './FilterButton'
 import Link from './Link'
 import styles from './Project.css'
 
 import * as images from '../images'
 import * as projects from '../markdown'
 
-const imgStyles = image => ({
+const imgStyles = ({ image, bgPosition }) => ({
   backgroundImage: `url('${images[image]}')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  ...(bgPosition && { backgroundPosition: bgPosition }),
 })
 
 const loadMarkdown = markdown => (
@@ -29,16 +31,27 @@ const buildName = name => (
 class Project extends Component {
   constructor() {
     super()
-    this.state = { markdown: null }
+    this.state = { markdown: null, image: null }
   }
 
   componentWillMount() {
     const { markdown: currentMd } = this.state
+    const { project: { markdown } } = this.props
 
-    if (!currentMd) {
-      const { project: { markdown } } = this.props
+    if (!currentMd && markdown) {
       loadMarkdown(markdown).then(md => this.setState({ markdown: md }))
     }
+  }
+
+  componentDidMount() {
+    // const box = this.project.getBoundingClientRect()
+
+    // if (box.top < global.window.innerHeight) {
+    // const { project: { image } } = this.props
+    // this.setState({ image })
+    // } else {
+    //   // listen to scroll and do shit
+    // }
   }
 
   render() {
@@ -46,30 +59,19 @@ class Project extends Component {
     const { markdown } = this.state
 
     return (
-      <div className={styles.project}>
-        <div className={styles.image} style={imgStyles(project.image)} />
-        <div className={styles.content}>
-          <div className={styles.pad} />
-          <div className={styles.info}>
-            <h2 className={styles.name}>{buildName(project.name)}</h2>
-
-            <div className={styles.tags}>
-              {project.tags.map(t => (
-                <FilterButton text={t} key={t} />
-              ))}
-            </div>
-
-            {!!markdown && <Markdown source={markdown} />}
+      <div className={styles[project.style]}>
+        <div className={styles.project} ref={(p) => { this.project = p }}>
+          <div className={styles.image}>
+            <Link noHover to={project.url} style={imgStyles(project)} />
           </div>
-        </div>
-        <div className={styles.sheild} />
-        <div className={styles.actions}>
-          <span role="img" aria-label={project.action}>
-            <Link primary to={project.url}>{project.action}</Link>
-          </span>
-          <span role="img" aria-label={project.action}>
-            <Link secondary to={project.github}>GitHub</Link>
-          </span>
+
+          <div className={styles.content}>
+            <Link to={project.url}>
+              <h2 className={styles.name}>{buildName(project.name)}</h2>
+            </Link>
+
+            {!!markdown && <Markdown className={styles.markdown} source={markdown} />}
+          </div>
         </div>
       </div>
     )
