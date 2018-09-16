@@ -7,7 +7,7 @@ const StlyedLink = styled.a`
   text-transform: capitalize;
   letter-spacing: 1px;
   color: black;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid;
 
   ${props => !props.noHover && css`
     &:hover {

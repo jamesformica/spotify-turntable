@@ -102,6 +102,12 @@
   padding-top: 0.5rem;
 }
 
+.bigbird .more {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 60rem) {
   .project {
     flex-direction: column;
@@ -133,5 +139,9 @@
 
   .project .toggle {
     font-size: 1rem;
+  }
+
+  .project .more {
+    max-width: 100%;
   }
 }
