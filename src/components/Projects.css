@@ -1,12 +1,10 @@
 .bg {
-  background: black;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 .projects {
   margin-top: 2rem;
-  margin-bottom: 6rem;
   display: flex;
   flex-direction: column;
 }

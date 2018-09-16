@@ -1,16 +1,21 @@
 .project {
   width: 100%;
-  max-width: 70rem;
   min-height: 32rem;
   margin-top: 6rem;
   margin-bottom: 6rem;
   background: white;
+  border: 0.5rem solid black;
   display: flex;
 }
 
 .image > a {
   width: 100%;
   height: 100%;
+}
+
+.mainTitle {
+  display: flex;
+  flex-direction: column;
 }
 
 .name {
@@ -28,9 +33,32 @@
   font-weight: bold;
 }
 
+.links {
+  margin-top: 0.75rem;
+}
+
 .markdown {
-  margin-top: 2rem;
   font-size: 0.875rem;
+}
+
+.markdown p,
+.markdown ul {
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.more {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.toggle {
+  border: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .elmo .project {
@@ -72,4 +100,38 @@
 
 .bigbird .name {
   padding-top: 0.5rem;
+}
+
+@media (max-width: 60rem) {
+  .project {
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-width: 0.25rem;
+  }
+
+  .bigbird .project{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project .image {
+    order: 1;
+    height: 22rem;
+  }
+
+  .project .content {
+    order: 2;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .project .name {
+    font-size: 1.5rem;
+  }
+
+  .project .toggle {
+    font-size: 1rem;
+  }
 }

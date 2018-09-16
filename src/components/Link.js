@@ -6,12 +6,12 @@ const StlyedLink = styled.a`
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 1px;
-  font-weight: bold;
   color: black;
   border-bottom: 2px solid transparent;
 
   ${props => !props.noHover && css`
     &:hover {
+      color: deeppink;
       border-bottom: 2px solid;
     }
   `}

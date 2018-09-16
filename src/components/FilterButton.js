@@ -4,7 +4,8 @@ import styled, { css } from 'styled-components'
 import styles from './FilterButton.css'
 
 const StyledButton = styled.button`
-  border-color: white;
+  border-color: black;
+  background-color: black;
   font-size: 1.25rem;
   cursor: pointer;
 
