@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import Markdown from 'react-markdown'
+import debounce from 'lodash/debounce'
+import { Collapse } from 'react-collapse'
 
-import FilterButton from './FilterButton'
 import Link from './Link'
 import styles from './Project.css'
 
 import * as images from '../images'
 import * as projects from '../markdown'
 
-const imgStyles = image => ({
+const imgStyles = (image, bgPosition) => ({
   backgroundImage: `url('${images[image]}')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  ...(bgPosition && { backgroundPosition: bgPosition }),
 })
 
 const loadMarkdown = markdown => (
@@ -29,47 +33,83 @@ const buildName = name => (
 class Project extends Component {
   constructor() {
     super()
-    this.state = { markdown: null }
+    this.state = {
+      markdown: null,
+      image: null,
+      isOpen: false,
+    }
+
+    this.toggle = this.toggle.bind(this)
+    this.isInViewport = this.isInViewport.bind(this)
   }
 
   componentWillMount() {
     const { markdown: currentMd } = this.state
+    const { project: { markdown } } = this.props
 
-    if (!currentMd) {
-      const { project: { markdown } } = this.props
+    if (!currentMd && markdown) {
       loadMarkdown(markdown).then(md => this.setState({ markdown: md }))
     }
   }
 
+  componentDidMount() {
+    if (!this.isInViewport()) {
+      this.onScroll = debounce(this.isInViewport, 50)
+      global.window.addEventListener('scroll', this.onScroll)
+    }
+  }
+
+  isInViewport() {
+    const box = this.project.getBoundingClientRect()
+
+    if (box.top < global.window.innerHeight) {
+      const { project: { image } } = this.props
+      this.setState({ image })
+
+      if (this.onScroll) {
+        global.window.removeEventListener('scroll', this.onScroll)
+      }
+      return true
+    }
+    return false
+  }
+
+  toggle() {
+    const { isOpen } = this.state
+    this.setState({ isOpen: !isOpen })
+  }
+
   render() {
     const { project } = this.props
-    const { markdown } = this.state
+    const { markdown, isOpen, image } = this.state
 
     return (
-      <div className={styles.project}>
-        <div className={styles.image} style={imgStyles(project.image)} />
-        <div className={styles.content}>
-          <div className={styles.pad} />
-          <div className={styles.info}>
-            <h2 className={styles.name}>{buildName(project.name)}</h2>
+      <div className={styles[project.style]}>
+        <div className={styles.project} ref={(p) => { this.project = p }}>
+          <div className={styles.image}>
+            <Link noHover to={project.url} style={imgStyles(image, project.bgPosition)} />
+          </div>
 
-            <div className={styles.tags}>
-              {project.tags.map(t => (
-                <FilterButton text={t} key={t} />
-              ))}
+          <div className={styles.content}>
+            <div className={styles.mainTitle}>
+              <h2 className={styles.name}>{buildName(project.name)}</h2>
+
+              <span className={styles.links}>
+                <Link to={project.url}>website</Link>{' / '}<Link to={project.github}>code</Link>
+              </span>
             </div>
 
-            {!!markdown && <Markdown source={markdown} />}
+            {!!markdown && (
+              <div className={styles.more}>
+                <button type="button" className={styles.toggle} onClick={this.toggle}>
+                  Want to know more?
+                </button>
+                <Collapse isOpened={isOpen}>
+                  <Markdown className={styles.markdown} source={markdown} />
+                </Collapse>
+              </div>
+            )}
           </div>
-        </div>
-        <div className={styles.sheild} />
-        <div className={styles.actions}>
-          <span role="img" aria-label={project.action}>
-            <Link primary to={project.url}>{project.action}</Link>
-          </span>
-          <span role="img" aria-label={project.action}>
-            <Link secondary to={project.github}>GitHub</Link>
-          </span>
         </div>
       </div>
     )

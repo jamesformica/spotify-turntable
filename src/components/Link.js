@@ -2,15 +2,19 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 const StlyedLink = styled.a`
+  display: inline-block;
   text-decoration: none;
   text-transform: capitalize;
   letter-spacing: 1px;
-  font-weight: bold;
   color: black;
+  border-bottom: 1px solid;
 
-  &:hover {
-    border-bottom: 1px solid;
-  }
+  ${props => !props.noHover && css`
+    &:hover {
+      color: deeppink;
+      border-bottom: 2px solid;
+    }
+  `}
 
   ${props => props.primary && css`
     color: blueviolet;
