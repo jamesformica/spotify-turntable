@@ -1,4 +1,10 @@
 {
   "modules": true,
   "minimize": true,
+  "plugins": {
+    "postcss-nested": true,
+    "postcss-import": {
+      "path": "./src/styles"
+    }
+  }
 }

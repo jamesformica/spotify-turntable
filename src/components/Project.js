@@ -4,15 +4,18 @@ import debounce from 'lodash/debounce'
 import { Collapse } from 'react-collapse'
 
 import Link from './Link'
+import Carousel from './Carousel'
 import styles from './Project.css'
 
 import * as images from '../images'
 import * as projects from '../markdown'
 
 const imgStyles = (image, bgPosition) => ({
+  width: '100%',
   backgroundImage: `url('${images[image]}')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
+  border: 0,
   ...(bgPosition && { backgroundPosition: bgPosition }),
 })
 
@@ -35,7 +38,7 @@ class Project extends Component {
     super()
     this.state = {
       markdown: null,
-      image: null,
+      isInViewport: false,
       isOpen: false,
     }
 
@@ -61,10 +64,10 @@ class Project extends Component {
 
   isInViewport() {
     const box = this.project.getBoundingClientRect()
+    const point = box.top - global.window.innerHeight / 2
 
-    if (box.top < global.window.innerHeight) {
-      const { project: { image } } = this.props
-      this.setState({ image })
+    if (point < global.window.innerHeight) {
+      this.setState({ isInViewport: true })
 
       if (this.onScroll) {
         global.window.removeEventListener('scroll', this.onScroll)
@@ -81,13 +84,33 @@ class Project extends Component {
 
   render() {
     const { project } = this.props
-    const { markdown, isOpen, image } = this.state
+    const { markdown, isOpen, isInViewport } = this.state
+    const isCarousel = !!project.image.push
+
+    const hasWebsite = !!project.url
+    const hasCode = !!project.github
 
     return (
       <div className={styles[project.style]}>
         <div className={styles.project} ref={(p) => { this.project = p }}>
           <div className={styles.image}>
-            <Link noHover to={project.url} style={imgStyles(image, project.bgPosition)} />
+            {isInViewport && isCarousel && (
+              <Carousel>
+                {project.image.map(img => (
+                  <Link
+                    noHover
+                    to={project.url}
+                    key={img}
+                    style={imgStyles(img, project.bgPosition)}
+                    className={styles.image}
+                  />
+                ))}
+              </Carousel>
+            )}
+
+            {isInViewport && !isCarousel && (
+              <Link noHover to={project.url} style={imgStyles(project.image, project.bgPosition)} />
+            )}
           </div>
 
           <div className={styles.content}>
@@ -95,7 +118,9 @@ class Project extends Component {
               <h2 className={styles.name}>{buildName(project.name)}</h2>
 
               <span className={styles.links}>
-                <Link to={project.url}>website</Link>{' / '}<Link to={project.github}>code</Link>
+                {hasWebsite && <Link to={project.url}>website</Link>}
+                {hasWebsite && hasCode && ' / '}
+                {hasCode && <Link to={project.github}>code</Link>}
               </span>
             </div>
 

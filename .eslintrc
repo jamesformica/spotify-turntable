@@ -6,6 +6,7 @@
     "semi": [1, "never"],
     "object-curly-newline": 0,
     "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-proto": 0,
     "react/jsx-filename-extension": 0,
     "react/forbid-prop-types": 0,
     "react/prop-types": 0,
