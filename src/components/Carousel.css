@@ -1,17 +1,29 @@
-.previous {
+.arrow {
   color: white;
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.2);
+  width: 1.5rem;
+  height: 18rem;
   border: 0;
   font-size: 1.5rem;
   outline: none;
   cursor: pointer;
-  border-radius: 0 50% 50% 0;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.previous {
+  composes: arrow;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .next {
-  composes: previous;
-  transform: rotateY(180deg);
+  composes: arrow;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }

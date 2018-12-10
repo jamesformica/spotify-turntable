@@ -8,11 +8,13 @@ const StlyedLink = styled.a`
   letter-spacing: 1px;
   color: black;
   border-bottom: 1px solid;
+  margin-bottom: 1px;
 
   ${props => !props.noHover && css`
     &:hover {
       color: deeppink;
       border-bottom: 2px solid;
+      margin-bottom: 0;
     }
   `}
 

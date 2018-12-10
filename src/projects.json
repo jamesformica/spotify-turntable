@@ -1,6 +1,20 @@
 [
   {
     "name": [
+      "You",
+      "Tube"
+    ],
+    "tags": [
+      "Tutorial"
+    ],
+    "url": "https://www.youtube.com/channel/UChUKUZTIK8eFDHSuX_5EBrA",
+    "bgPosition": "top left",
+    "image": "youtube",
+    "markdown": "youtube",
+    "style": "elmo"
+  },
+  {
+    "name": [
       "Hub",
       "ly"
     ],

@@ -23,10 +23,15 @@ const About = () => (
         </p>
         <p>
           <span className={styles.item}>CSS Modules</span>-
-          <span className={styles.item}>PostCSS</span>-
-          <span className={styles.item}>SASS</span>
+          <span className={styles.item}>Isomorphic</span>-
+          <span className={styles.item}>Canvas</span>
         </p>
         <p />
+        <p>
+          <Link className={styles.item} to="https://www.youtube.com/channel/UChUKUZTIK8eFDHSuX_5EBrA">YouTube</Link>-
+          <Link className={styles.item} to="https://codepen.io/jamesformica/">CodePen</Link>
+        </p>
+
         <p>
           <Link className={styles.item} to="https://twitter.com/jamesralphjr">twitter</Link>-
           <Link className={styles.item} to="https://linkedin.com/in/james-formica">linkedIn</Link>-
