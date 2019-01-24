@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Markdown from 'react-markdown'
-import debounce from 'lodash/debounce'
 import { Collapse } from 'react-collapse'
 
 import Link from './Link'
 import Carousel from './Carousel'
+import InViewport from '../helpers/InViewport'
 import styles from './Project.css'
 
 import * as images from '../images'
@@ -34,16 +34,10 @@ const buildName = name => (
 )
 
 class Project extends Component {
-  constructor() {
-    super()
-    this.state = {
-      markdown: null,
-      isInViewport: false,
-      isOpen: false,
-    }
-
-    this.toggle = this.toggle.bind(this)
-    this.isInViewport = this.isInViewport.bind(this)
+  state = {
+    markdown: null,
+    isInViewport: false,
+    isOpen: false,
   }
 
   componentWillMount() {
@@ -55,31 +49,13 @@ class Project extends Component {
     }
   }
 
-  componentDidMount() {
-    if (!this.isInViewport()) {
-      this.onScroll = debounce(this.isInViewport, 50)
-      global.window.addEventListener('scroll', this.onScroll)
-    }
-  }
-
-  isInViewport() {
-    const box = this.project.getBoundingClientRect()
-    const point = box.top - global.window.innerHeight / 2
-
-    if (point < global.window.innerHeight) {
-      this.setState({ isInViewport: true })
-
-      if (this.onScroll) {
-        global.window.removeEventListener('scroll', this.onScroll)
-      }
-      return true
-    }
-    return false
-  }
-
-  toggle() {
+  toggle = () => {
     const { isOpen } = this.state
     this.setState({ isOpen: !isOpen })
+  }
+
+  inViewport = () => {
+    this.setState({ isInViewport: true })
   }
 
   render() {
@@ -110,6 +86,10 @@ class Project extends Component {
 
             {isInViewport && !isCarousel && (
               <Link noHover to={project.url} style={imgStyles(project.image, project.bgPosition)} />
+            )}
+
+            {!isInViewport && (
+              <InViewport inViewport={this.inViewport} className={styles.viewport} />
             )}
           </div>
 
