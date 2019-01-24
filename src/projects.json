@@ -1,6 +1,26 @@
 [
   {
     "name": [
+      "O(n)",
+      "Week+"
+    ],
+    "tags": [
+      "React",
+      "Canvas"
+    ],
+    "url": "https://jamesformica.github.io/onweek-schedule/",
+    "bgPosition": "center",
+    "image": [
+      "onweekheader",
+      "onweekschedule",
+      "onweekcanvas",
+      "onweekfooter"
+    ],
+    "markdown": "onweek",
+    "style": "bigbird"
+  },
+  {
+    "name": [
       "You",
       "Tube"
     ],
