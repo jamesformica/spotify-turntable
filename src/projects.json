@@ -1,6 +1,22 @@
 [
   {
     "name": [
+      "Fourier",
+      "Circles"
+    ],
+    "tags": [
+      "Canvas",
+      "Art"
+    ],
+    "url": "https://jamesformica.github.io/fourier-circles/",
+    "github": "https://github.com/jamesformica/fourier-circles",
+    "bgPosition": "60% 50%",
+    "image": "fourier",
+    "markdown": "fourier",
+    "style": "elmo"
+  },
+  {
+    "name": [
       "O(n)",
       "Week+"
     ],
@@ -418,9 +434,9 @@
     "url": "https://jamesformica.github.io/trains",
     "github": "https://github.com/jamesformica/Trains",
     "image": "trains",
-    "bgPosition": "left top",
+    "bgPosition": "center",
     "markdown": "trains",
-    "style": "elmo"
+    "style": "bigbird"
   },
   {
     "name": [
