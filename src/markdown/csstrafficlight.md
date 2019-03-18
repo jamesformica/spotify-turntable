@@ -1,1 +1,0 @@
-The second installment of my train CSS creations: a traffic light!

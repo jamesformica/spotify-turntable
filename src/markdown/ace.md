@@ -1,3 +1,0 @@
-Our company hosted another "innovation day" which is essentially a 24 hour window to create/develop anything you like. This year we decided to leverage the fact that we had a 3D printer and created an **Awesome Chocolate Engraver**. We replaced the printer head with a Dremmel and wrote custom software to convert a HTML canvas into G-Code instuctions for the 3D printer.
-
-It was a hilarious project and if you want to see some results of our efforts you can [read about it in my blog post](https://jamesformica.github.io/blog/?article=7).
