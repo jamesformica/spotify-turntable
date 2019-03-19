@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import sample from 'lodash/sample'
 
-import { DEAD_TEXT_OPTIONS, THANOS_DURATION } from '../constants'
+import { DEAD_TEXT_OPTIONS } from '../constants'
+import useThanosDelay from '../helpers/useThanosDelay'
 import Dissolve from './Dissolve'
 import Status from './Status'
 
 const Dead = () => {
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => setShow(true), THANOS_DURATION)
-  })
+  const show = useThanosDelay()
 
   return show && (
     <>

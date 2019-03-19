@@ -28,7 +28,7 @@ export const DEAD_TEXT_OPTIONS = [
   'Apologies, you have been deemed unfit to carry on.',
   'Unfortunately your journey ends here. Wave goodbye to those near you.',
   'Im afraid you must die. Don\'t worry, half of the population is too, you\'re not special...',
-  'I hope you lived life to the fullest...',
+  'I hope you lived life to the fullest, cause it\'s over now...',
   'Any last words? Might I suggest screaming "THIS IS BULLSHIT" at the top of your lungs...',
   'Goodbye, auf Wiedersehen, adiós, arrivederci, ciao, au revoir, bon voyage, shalom...',
 ]

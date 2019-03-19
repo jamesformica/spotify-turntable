@@ -19,7 +19,7 @@ const Input = () => {
 
   return (
     <>
-      <h1 className={styles.title}>Do you survive Thanos?</h1>
+      <h1 className={styles.title}>Will you survive Thanos?</h1>
       <form onSubmit={onSubmit} className={styles.form}>
         <input
           ref={inputEl}

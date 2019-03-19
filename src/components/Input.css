@@ -12,6 +12,7 @@
   text-shadow: 4px 4px 2px var(--yellow-text);
   text-transform: uppercase;
   text-align: center;
+  animation: fadeIn 2000ms ease-in forwards;
 
   @media (min-width: 30rem) {
     font-size: 6rem;
@@ -25,6 +26,7 @@
   align-items: stretch;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  animation: fadeIn 2000ms ease-in forwards;
 
   @media (min-width: 30rem) {
     flex-direction: row;
@@ -72,5 +74,15 @@
   @media (min-width: 30rem) {
     border-left: 1px solid white;
     border-radius: 0 10px 10px 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
