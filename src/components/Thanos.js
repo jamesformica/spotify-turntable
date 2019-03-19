@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { THANOS_DURATION, SNAP_DURATION, SNAP_DELAY } from '../timings'
+import { THANOS_DURATION, SNAP_DURATION, SNAP_DELAY } from '../constants'
 import snap from '../images/snap.png'
 import styles from './Thanos.css'
 

@@ -1,38 +1,32 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 
-import background from '../images/galaxy.jpg'
+import { MODES } from '../constants'
 import Input from './Input'
 import Alive from './Alive'
 import Dead from './Dead'
 import Thanos from './Thanos'
+import FateDispatch from '../context'
+import reducer from '../reducer'
+import background from '../images/galaxy.jpg'
 import styles from './App.css'
-
 
 const bgStyles = {
   backgroundImage: `url('${background}')`,
 }
 
-const MODES = {
-  input: 'input',
-  alive: 'alive',
-  dead: 'dead',
-}
-
 const App = () => {
-  const [mode, setMode] = useState(MODES.input)
-
-  const setAlive = () => setMode(MODES.alive)
-  const setDead = () => setMode(MODES.dead)
-  const setInput = () => setMode(MODES.input)
+  const [mode, dispatch] = useReducer(reducer, MODES.input)
 
   return (
-    <div className={styles.app}>
-      <div className={styles.bg} style={bgStyles} />
-      {mode === MODES.input && <Input {...{ setAlive, setDead }} />}
-      {mode !== MODES.input && <Thanos />}
-      {mode === MODES.alive && <Alive reset={setInput} />}
-      {mode === MODES.dead && <Dead reset={setInput} />}
-    </div>
+    <FateDispatch.Provider value={dispatch}>
+      <div className={styles.app}>
+        <div className={styles.bg} style={bgStyles} />
+        {mode === MODES.input && <Input />}
+        {mode !== MODES.input && <Thanos />}
+        {mode === MODES.alive && <Alive />}
+        {mode === MODES.dead && <Dead />}
+      </div>
+    </FateDispatch.Provider>
   )
 }
 

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import sample from 'lodash/sample'
 
-import { THANOS_DURATION } from '../timings'
-import { DEAD_TEXT_OPTIONS } from '../constants'
+import { DEAD_TEXT_OPTIONS, THANOS_DURATION } from '../constants'
 import Dissolve from './Dissolve'
 import Status from './Status'
 
-const Dead = ({ reset }) => {
+const Dead = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -16,7 +15,7 @@ const Dead = ({ reset }) => {
   return show && (
     <>
       <Dissolve />
-      <Status title="DEAD!" reset={reset}>
+      <Status title="DEAD!">
         {sample(DEAD_TEXT_OPTIONS)}
       </Status>
     </>

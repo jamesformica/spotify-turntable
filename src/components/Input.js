@@ -1,5 +1,6 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 
+import FateDispatch from '../context'
 import styles from './Input.css'
 
 const isAlive = (name) => {
@@ -13,30 +14,33 @@ const isAlive = (name) => {
   return charTotal % 2 === 0
 }
 
-const submit = (e, name, setAlive, setDead) => {
+const submit = (e, name, dispatch) => {
   e.preventDefault()
 
   const victim = name.trim()
 
   if (!victim) return null
-  return isAlive(victim) ? setAlive() : setDead()
+
+  return isAlive(victim)
+    ? dispatch({ type: 'ALIVE' })
+    : dispatch({ type: 'DEAD' })
 }
 
-const Input = ({ setAlive, setDead }) => {
+const Input = () => {
   const inputEl = useRef()
   const [name, setName] = useState('')
+  const dispatch = useContext(FateDispatch)
 
   const onInput = e => setName(e.target.value)
   const onChange = e => setName(e.target.value)
-  const onSubmit = e => submit(e, name, setAlive, setDead)
-
+  const onSubmit = e => submit(e, name, dispatch)
 
   useEffect(() => {
     inputEl.current.focus()
   })
 
   return (
-    <Fragment>
+    <>
       <h1 className={styles.title}>Do you survive Thanos?</h1>
       <form onSubmit={onSubmit} className={styles.form}>
         <input
@@ -50,7 +54,7 @@ const Input = ({ setAlive, setDead }) => {
         />
         <button type="submit" className={styles.snap}>Snap!</button>
       </form>
-    </Fragment>
+    </>
   )
 }
 

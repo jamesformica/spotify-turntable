@@ -1,3 +1,13 @@
+export const THANOS_DURATION = 4000
+export const SNAP_DURATION = 1000
+export const SNAP_DELAY = THANOS_DURATION / 2
+
+export const MODES = {
+  input: 'input',
+  alive: 'alive',
+  dead: 'dead',
+}
+
 export const RESET_TEXT_OPTIONS = [
   'Try another name',
   'Test another\'s fate',
