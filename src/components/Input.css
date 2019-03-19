@@ -1,48 +1,65 @@
 @import "../variables";
 
 .title {
+  max-width: 90vw;
   margin-top: 0;
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--purple-text);
   font-family: Bangers;
+  line-height: 1.2;
   letter-spacing: 0.5rem;
   mix-blend-mode: color-dodge;
   text-shadow: 4px 4px 2px var(--yellow-text);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: 30rem) {
+    font-size: 6rem;
+  }
 }
 
 .form {
+  max-width: 90vw;
   display: flex;
+  flex-direction: column;
   align-items: stretch;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+
+  @media (min-width: 30rem) {
+    flex-direction: row;
+  }
 }
 
 .input {
+  width: 100%;
   color: var(--yellow-text);
   font-family: monospace;
   background: transparent;
   border: 0;
   padding: 0.75rem 1.75rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 0.125rem;
+  text-align: center;
   outline: none;
 
   &::-webkit-input-placeholder {
     color: white;
   }
+
+  @media (min-width: 30rem) {
+    font-size: 2rem;
+    text-align: left;
+  }
 }
 
 .snap {
   color: var(--yellow-text);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 0.5rem 1.5rem;
   background-color: var(--purple-text);
   border: 0;
-  border-left: 1px solid white;
-  border-radius: 0 10px 10px 0;
-  font-size: 2rem;
+  border-radius: 0 0 10px 10px;
+  font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.125rem;
   mix-blend-mode: hard-light;
@@ -50,5 +67,10 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media (min-width: 30rem) {
+    border-left: 1px solid white;
+    border-radius: 0 10px 10px 0;
   }
 }
