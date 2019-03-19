@@ -17,7 +17,8 @@ const Alive = ({ reset }) => {
     <>
       <Confetti numberOfPieces={300} width={width} height={height} />
       <Status title="ALIVE!" reset={reset}>
-        Congratulations, apparently you have been deemed worthy of suvival... we&apos;re not sure why...
+        Congratulations, apparently you have been deemed worthy
+        of suvival... we&apos;re not sure why...
       </Status>
     </>
   )
