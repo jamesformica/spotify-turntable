@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import sample from 'lodash/sample'
 
 import { THANOS_DURATION } from '../timings'
+import { DEAD_TEXT_OPTIONS } from '../constants'
 import Dissolve from './Dissolve'
 import Status from './Status'
 
@@ -15,7 +17,7 @@ const Dead = ({ reset }) => {
     <>
       <Dissolve />
       <Status title="DEAD!" reset={reset}>
-        Mr. Stark, I don&apos;t feel so good...
+        {sample(DEAD_TEXT_OPTIONS)}
       </Status>
     </>
   )

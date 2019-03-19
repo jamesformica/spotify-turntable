@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Confetti from 'react-confetti'
+import sample from 'lodash/sample'
 
 import { THANOS_DURATION } from '../timings'
+import { ALIVE_TEXT_OPTIONS } from '../constants'
 import Status from './Status'
 
 const Alive = ({ reset }) => {
@@ -17,8 +19,7 @@ const Alive = ({ reset }) => {
     <>
       <Confetti numberOfPieces={300} width={width} height={height} />
       <Status title="ALIVE!" reset={reset}>
-        Congratulations, apparently you have been deemed worthy
-        of suvival... we&apos;re not sure why...
+        {sample(ALIVE_TEXT_OPTIONS)}
       </Status>
     </>
   )

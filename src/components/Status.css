@@ -28,6 +28,24 @@
   text-align: center;
 }
 
+.reset {
+  z-index: 3;
+  font-size: 1rem;
+  color: var(--yellow-text);
+  background: rgba(0, 0, 0, 0.4);
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 @keyframes status {
   from {
     transform: scale(0) rotate(0deg);
