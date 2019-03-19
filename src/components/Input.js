@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect, useRef } from 'react'
 
 import styles from './Input.css'
 
@@ -23,17 +23,24 @@ const submit = (e, name, setAlive, setDead) => {
 }
 
 const Input = ({ setAlive, setDead }) => {
+  const inputEl = useRef()
   const [name, setName] = useState('')
 
   const onInput = e => setName(e.target.value)
   const onChange = e => setName(e.target.value)
   const onSubmit = e => submit(e, name, setAlive, setDead)
 
+
+  useEffect(() => {
+    inputEl.current.focus()
+  })
+
   return (
     <Fragment>
-      <h1 className={styles.title}>Do you survive?</h1>
+      <h1 className={styles.title}>Do you survive Thanos?</h1>
       <form onSubmit={onSubmit} className={styles.form}>
         <input
+          ref={inputEl}
           type="text"
           value={name}
           onInput={onInput}

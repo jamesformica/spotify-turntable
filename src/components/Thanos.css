@@ -1,0 +1,50 @@
+.thanos {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  animation-name: slideInOut;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.img {
+  height: 60vh;
+}
+
+.snap {
+  position: absolute;
+  top: -1rem;
+  right: -2rem;
+  font-family: Bangers;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 4px 4px 2px rgba(217, 198, 60, 0.6);
+  letter-spacing: 0.25rem;
+  transform: scale(0) rotate(0);
+  animation-name: snap;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideInOut {
+  0%,
+  100% {
+    transform: translate(-50%, 100%);
+  }
+
+  50% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes snap {
+  0%,
+  100% {
+    transform: scale(0) rotate(0);
+  }
+
+  40%,
+  80% {
+    transform: scale(1) rotate(40deg);
+  }
+}

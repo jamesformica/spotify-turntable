@@ -1,12 +1,15 @@
+@import "../variables";
+
 .title {
   margin-top: 0;
   font-size: 6rem;
-  color: #6f3c89;
+  color: var(--purple-text);
   font-family: Bangers;
   letter-spacing: 0.5rem;
-  mix-blend-mode: color-burn;
-  text-shadow: 4px 4px 2px #d9c63c;
+  mix-blend-mode: color-dodge;
+  text-shadow: 4px 4px 2px var(--yellow-text);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .form {
@@ -17,7 +20,7 @@
 }
 
 .input {
-  color: #d9c63c;
+  color: var(--yellow-text);
   font-family: monospace;
   background: transparent;
   border: 0;
@@ -32,10 +35,10 @@
 }
 
 .snap {
-  color: #d9c63c;
+  color: var(--yellow-text);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: #6f3c89;
+  background-color: var(--purple-text);
   border: 0;
   border-left: 1px solid white;
   border-radius: 0 10px 10px 0;
