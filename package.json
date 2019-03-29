@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url https://jamesformica.me/thanos-fate",
+    "build": "parcel build index.html --public-url /",
     "lint": "yarn eslint .",
     "predeploy": "yarn lint && yarn build",
     "deploy": "yarn gh-pages -d dist"
