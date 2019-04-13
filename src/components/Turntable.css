@@ -1,3 +1,7 @@
+:root {
+  --shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
 .turntable {
   position: absolute;
   top: 50%;
@@ -66,7 +70,7 @@
   left: 50%;
   width: 1vw;
   height: 1vw;
-  background: radial-gradient(silver, grey);
+  background: radial-gradient(white, silver, grey);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -88,6 +92,7 @@
   background: radial-gradient(#222, #333);
   border: 1px solid white;
   border-radius: 50%;
+  box-shadow: var(--shadow);
   transform: translateX(-50%);
 
   &::before {
@@ -124,7 +129,9 @@
   position: absolute;
   width: 3vw;
   height: 6vw;
-  background: #666;
+  background: radial-gradient(#222, #333);
+  border-radius: 0.2vw;
+  box-shadow: var(--shadow);
 }
 
 .baseCircle {
@@ -133,8 +140,9 @@
   left: 50%;
   width: 5vw;
   height: 5vw;
-  background: #666;
+  background: radial-gradient(#666, #444, #333);
   border-radius: 50%;
+  box-shadow: var(--shadow);
   transform: translateX(-50%);
 
   &::after {
@@ -144,7 +152,7 @@
     left: 50%;
     width: 3vw;
     height: 3vw;
-    border: 0.2vw solid #777;
+    border: 0.2vw solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
     transform: translate(-50%, -50%);
   }
@@ -156,8 +164,9 @@
   left: 1.5vw;
   width: 0.8vw;
   height: 10vw;
-  background: #666;
+  background: linear-gradient(90deg, #666, #fff, #666);
   transform: translateX(-50%);
+  box-shadow: var(--shadow);
   border-bottom-right-radius: 0.5vw;
 }
 
@@ -167,7 +176,8 @@
   left: 1.5vw;
   width: 0.7vw;
   height: 8vw;
-  background: #666;
+  background: linear-gradient(90deg, #666, #fff, #666);
+  box-shadow: var(--shadow);
   transform: translateX(-50%) rotate(30deg);
   transform-origin: 50% 0;
 }
@@ -178,7 +188,8 @@
   left: calc((1.5vw - 0.7vw) / -2);
   width: 1.5vw;
   height: 3vw;
-  background: #444;
+  background: radial-gradient(#333, #444);
+  border-radius: 1px;
 }
 
 .dot1 {
@@ -187,7 +198,7 @@
   left: 50%;
   width: 0.5vw;
   height: 0.5vw;
-  background: #222;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   transform: translateX(-50%);
 }
@@ -198,7 +209,7 @@
   left: 50%;
   width: 0.7vw;
   height: 0.7vw;
-  background: #222;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   transform: translateX(-50%);
 }

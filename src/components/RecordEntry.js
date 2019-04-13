@@ -16,6 +16,7 @@ const flipIn = keyframes`
 const RecordEntry = styled(Record)`
   animation: ${flipIn} ${TIMINGS.IN_OUT}ms infinite ease-in-out;
   animation-fill-mode: forwards;
+  z-index: 100;
 `
 
 export default RecordEntry

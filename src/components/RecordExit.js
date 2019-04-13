@@ -16,6 +16,7 @@ const flipOut = keyframes`
 const RecordExit = styled(Record)`
   animation: ${flipOut} ${TIMINGS.IN_OUT}ms infinite ease-in-out;
   animation-fill-mode: forwards;
+  z-index: 100;
 `
 
 export default RecordExit
