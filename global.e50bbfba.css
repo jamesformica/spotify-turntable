@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/*# sourceMappingURL=/global.e50bbfba.css.map */
