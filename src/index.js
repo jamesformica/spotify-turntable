@@ -8,7 +8,7 @@ import App from './components/App'
 const query = qs.parse(global.location.hash)
 
 if (!query['#access_token']) {
-  const params = qs.stringify({ ...SPOTIFY_AUTH_PARAMS, redirect_uri: 'http://localhost:1234' })
+  const params = qs.stringify({ ...SPOTIFY_AUTH_PARAMS, redirect_uri: global.location.href })
 
   global.location.href = `${SPOTIFY_AUTH_URL}?${params}`
 } else {
