@@ -1,3 +1,1 @@
-# SNAP!
-
-Do you survive?
+# This is pretty damn aweaome if I do say so myself...
