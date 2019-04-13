@@ -30695,7 +30695,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  animation: ", " ", "ms infinite ease-in-out;\n  animation-fill-mode: forwards;\n"]);
+  var data = _taggedTemplateLiteral(["\n  animation: ", " ", "ms infinite ease-in-out;\n  animation-fill-mode: forwards;\n  z-index: 100;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -30739,7 +30739,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  animation: ", " ", "ms infinite ease-in-out;\n  animation-fill-mode: forwards;\n"]);
+  var data = _taggedTemplateLiteral(["\n  animation: ", " ", "ms infinite ease-in-out;\n  animation-fill-mode: forwards;\n  z-index: 100;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -34000,16 +34000,15 @@ var query = _qs.default.parse(global.location.hash);
 
 if (!query['#access_token']) {
   var params = _qs.default.stringify(_objectSpread({}, _constants.SPOTIFY_AUTH_PARAMS, {
-    redirect_uri: 'http://localhost:1234'
+    redirect_uri: global.location.href
   }));
 
   global.location.href = "".concat(_constants.SPOTIFY_AUTH_URL, "?").concat(params);
-  return;
+} else {
+  _reactDom.default.render(_react.default.createElement(_App.default, {
+    auth: query
+  }), global.document.getElementById('root'));
 }
-
-_reactDom.default.render(_react.default.createElement(_App.default, {
-  auth: query
-}), global.document.getElementById('root'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","qs":"node_modules/qs/lib/index.js","./constants":"src/constants.js","./components/App":"src/components/App.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -34038,7 +34037,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63680" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60085" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
