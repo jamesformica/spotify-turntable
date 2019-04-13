@@ -12,11 +12,6 @@ body {
 
 body {
   margin: 0;
-  background-color: black;
-  font-display: swap;
-}
-
-body,
-button {
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #222;
+  font-family: 'Montserrat', sans-serif;
 }

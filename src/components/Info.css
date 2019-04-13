@@ -1,0 +1,25 @@
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 1.5vw;
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+.show {
+  transform: translateY(0);
+}
+
+.title {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.artist {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
