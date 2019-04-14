@@ -11,7 +11,10 @@ const fetchCurrentTrack = auth => (
         Authorization: `Bearer ${auth['#access_token']}`,
       },
     }).then(response => resolve(response.data))
-      .catch(() => { global.location.href = '/' })
+      .catch(() => {
+        const url = `${global.location.origin}${global.location.pathname}`
+        global.location.href = url
+      })
   })
 )
 
