@@ -33819,7 +33819,8 @@ var fetchCurrentTrack = function fetchCurrentTrack(auth) {
     }).then(function (response) {
       return resolve(response.data);
     }).catch(function () {
-      global.location.href = '/';
+      var url = "".concat(global.location.origin).concat(global.location.pathname);
+      global.location.href = url;
     });
   });
 };
@@ -34037,7 +34038,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60085" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50388" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
